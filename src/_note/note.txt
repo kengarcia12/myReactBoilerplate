@@ -1,0 +1,21 @@
+STATELESS COMPONENT SAMPLE
+
+
+export default conts Stateless = (props) => {
+        return (
+           
+            <nav className="navbar navbar-inverse">
+                <div className="container-fluid">
+                    <div className="navbar-header">
+                    <span>{this.state.age}</span>
+                    <a className="navbar-brand" href="#"><Title title={this.props.title} /></a>
+                    </div>
+                    <ul className="nav navbar-nav">
+                        { this.props.initialHobbies.map((hobby, i) => <li key={i}>{hobby}</li>) }
+                    </ul>
+                </div>
+                <button onClick={this.handleClick.bind(this)}>Click me</button>
+            </nav>
+        );
+    };
+

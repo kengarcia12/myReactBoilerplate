@@ -1,26 +1,37 @@
 import React from 'react';
 import Header from './common/header';
 import Footer from './common/footer';
-
+import Routes from './../../routes';
 
 
 
 export default class Layout extends React.Component {
-    constructor(){
+    constructor(props){
         super();
         this.state = {
-            title: "Welcome",
+            age: 23,
+            title: "My React",
+            hobbies: ["Playing","Watching Movies", "Listening Music"],
         }
     }
-
-    changeTitle(title){
-        this.setState({ title })
+    onGreet(){
+        alert("hello");
+    }
+    onChangeTitle(value) {
+        this.setState({ title: value })
     }
 
     render(){
+
         return (
             <div>
-                <Header title={this.state.title} changeTitle={this.changeTitle.bind(this)} />
+                <Header
+                    title={this.state.title} 
+                    initialAge={this.state.age} 
+                    initialHobbies={this.state.hobbies} 
+                    greet={this.onGreet}
+                    changeTitle={this.onChangeTitle.bind(this)}
+                />
                 <Footer />
             </div>
         );
