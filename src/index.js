@@ -5,9 +5,16 @@
 */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Layout from './components/layout/index';
+import { BrowserRouter, HashRouter } from 'react-router-dom';
+
+
+import Layout from './layout';
 import Routes from './routes';
 
 const app = document.getElementById('root');
 
-ReactDOM.render(<Routes />, app );
+ReactDOM.render(
+    <HashRouter>
+        <Routes/>
+    </HashRouter>,
+app );
